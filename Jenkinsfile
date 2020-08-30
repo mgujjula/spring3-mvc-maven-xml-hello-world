@@ -5,13 +5,7 @@ pipeline{
      maven "Maven3"
      }
   stages{
-     stage('gitSCM'){
-      steps{
-        echo 'Start of gitSCM step'
-        git changelog: false, credentialsId: 'git credentials', poll: false, url: 'https://github.com/mgujjula/spring3-mvc-maven-xml-hello-world.git'
-      }
-      }
-	  stage ('Initialize') {
+    	  stage ('Initialize') {
         steps {
                 sh '''
                     echo "PATH = ${PATH}"
